@@ -1,0 +1,116 @@
+canvas#canvas_feynman{
+  width : 600px ;
+  margin : auto ;
+}
+canvas#canvas_preview{
+  width  : 200px ;
+  height :  50px ;
+  margin : auto ;
+}
+canvas{
+  border : 2px solid black ;
+}
+canvas.glyph{
+  border : 1px solid black ;
+}
+canvas.selected{
+  border : 2px dashed green ;
+}
+
+span.settings{
+  text-decoration : underline ;
+}
+td#td_canvas_feynman_wrapper{
+  width  : 400px ;
+  height : 400px ;
+  padding : 0px ;
+}
+button_1{
+  width : 50px ;
+  padding : 0px ;
+}
+button_2{
+  width : 100px ;
+  padding : 0px ;
+}
+button_4{
+  width : 200px ;
+  padding : 0px ;
+}
+img#img_out{
+  width  : 500px ;
+  height : 500px ;
+  border : 1px solid green ;
+}
+div#hidden{
+  display : none ;
+}
+canvas#canvas_paint{
+  display : none ;
+}
+span#span_mathjax_box{
+  background : white ;
+  font-size : 20pt ;
+  padding : 0.25em ;
+}
+div#mathjax_box_wrapper{
+  border : 2px solid black ;
+  padding : 10px ;
+  width : 200px ;
+}
+
+th{
+  text-align : center ;
+  font-weight : normal ;
+  padding : 0.5em 0em 0em 0em ;
+}
+
+div.tab     { display : table      ; }
+div.tab_row { display : table-row  ; }
+div.tab_cell{
+  display : table-cell ;
+  text-align : center ;
+  padding-left : 0.25em ;
+  padding-right : 0.25em ;
+}
+div.vertical_middle{
+   vertical-align : middle ;
+}
+div.tab_cell2{ width : 50% ; }
+div.tab_cell3{ width : 33% ; }
+
+div.glyph_render{
+  display : inline ;
+  font-size : 20pt ;
+}
+
+td.td_latex_wrapper, td.td_latex_wrapper_selected{
+  padding : 0.1em ;
+  font-size : 20pt ;
+  border : 2px solid black ;
+  background : white ;
+}
+td.td_latex_wrapper_selected{
+  border : 2px dashed green ;
+}
+span{
+  border : 0px dashed red ;
+}
+
+h3{
+  padding-left : 0px ;
+  padding-right : 0px ;
+  text-align: center ;
+}
+
+input#input_line_width{
+  width : 20px ;
+}
+
+table{
+  margin : auto ;
+}
+
+div#hidden_image_preview{
+  display : none ;
+}
