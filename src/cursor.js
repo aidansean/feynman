@@ -1,3 +1,5 @@
+var history_feynman = [] ;
+
 function keydown(evt){
   var keyDownID = window.event ? event.keyCode : (evt.keyCode != 0 ? evt.keyCode : evt.which) ;
   alert(keyDownID) ;
@@ -156,9 +158,9 @@ function get_xy_up(e){
   else if(current_brush=='delete1'){
     for(var i=elements.length-1 ; i>=0 ; i--){
       if(elements[i].p1_in_rectangle && elements[i].p2_in_rectangle){
-        for(var j=history.length-1 ; j>=0 ; j--){
-          if(history[j]==elements[i].uid){
-            history.splice(j,1) ;
+        for(var j=history_feynman.length-1 ; j>=0 ; j--){
+          if(history_feynman[j]==elements[i].uid){
+            history_feynman.splice(j,1) ;
             break ;
           }
         }
@@ -167,9 +169,9 @@ function get_xy_up(e){
     }
     for(var i=characters.length-1 ; i>=0 ; i--){
       if(characters[i].in_rectangle){
-        for(var j=history.length-1 ; j>=0 ; j--){
-          if(history[j]==characters[i].uid){
-            history.splice(j,1) ;
+        for(var j=history_feynman.length-1 ; j>=0 ; j--){
+          if(history_feynman[j]==characters[i].uid){
+            history_feynman.splice(j,1) ;
             break ;
           }
         }
@@ -191,19 +193,19 @@ function get_xy_up(e){
     var uid = 'C' + character_uid ;
     character.uid = uid ;
     characters.push(character) ;
-    history.push(uid) ;
+    history_feynman.push(uid) ;
     character_uid++ ;
   }
   else if(current_brush=='line'){
     var line = new arc_element(x_down,y_down,x_up,y_up) ;
     var uid = 'L' + element_uid ;
     line.uid = uid ;
-    history.push(uid) ;
+    history_feynman.push(uid) ;
     element_uid++ ;
     line.make_line() ;
     current_element = null ;
     elements.push(line) ;
-    history.push(uid) ;
+    history_feynman.push(uid) ;
     x_down = -1 ;
     y_down = -1 ;
   }
@@ -214,7 +216,7 @@ function get_xy_up(e){
   else if(current_brush=='arc3'){
     var uid = 'A' + element_uid ;
     current_element.uid = uid ;
-    history.push(uid) ;
+    history_feynman.push(uid) ;
     element_uid++ ;
     elements.push(current_element) ;
     current_element = null ;
@@ -223,7 +225,7 @@ function get_xy_up(e){
   else if(current_brush=='circle'){
     var uid = 'C' + element_uid ;
     current_element.uid = uid ;
-    history.push(uid) ;
+    history_feynman.push(uid) ;
     element_uid++ ;
     elements.push(current_element) ;
     current_element = null ;

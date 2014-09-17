@@ -4,7 +4,7 @@ $stylesheets = array('style.css') ;
 $js_scripts  = array('settings.js', 'elements.js', 'cursor.js', 'functions.js', 'draw.js', 'glyphs.js', 'glyphs_data.js') ;
 include($_SERVER['FILE_PREFIX'] . '/_core/preamble.php') ;
 ?>
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+  
   <div class="right">
     <div class="blurb center">
       <p>This page should help you to make Feynman diagrams.  For best results use Firefox.  Note this page may not work with Safari.</p>

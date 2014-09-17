@@ -708,7 +708,6 @@ function arrowhead_from_style(style){
   if(style=='cross' ) return new arrowhead_cross () ;
 }
 
-var history    = new Array() ;
 var elements   = new Array() ;
 var characters = new Array() ;
 var current_element = null ;

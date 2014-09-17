@@ -65,13 +65,13 @@ function choose_arrowhead_style(style){
 }
 
 function remove_last_thing(){
-  if(history.length==0) return ;
-  var last_history = history.pop() ;
+  if(history_feynman.length==0) return ;
+  var last_history_feynman = history_feynman.pop() ;
   for(var i=elements.length-1 ; i>=0 ; i--){
-    if(elements[i].uid==last_history) elements.splice(i,1) ;
+    if(elements[i].uid==last_history_feynman) elements.splice(i,1) ;
   }
   for(var i=characters.length-1 ; i>=0 ; i--){
-    if(characters[i].uid==last_history) characters.splice(i,1) ;
+    if(characters[i].uid==last_history_feynman) characters.splice(i,1) ;
   }
   find_extrema() ;
   update_canvas() ;
@@ -245,6 +245,7 @@ function read_markup(){
 }
 
 function read_markup2(){
+  find_extrema() ;
   update_canvas() ;
   draw_all() ;
   paint_image() ;
