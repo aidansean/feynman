@@ -2,6 +2,7 @@
 $title = 'Feynman diagram maker' ;
 $stylesheets = array('style.css') ;
 $js_scripts  = array('settings.js', 'elements.js', 'cursor.js', 'functions.js', 'draw.js', 'glyphs.js', 'glyphs_data.js') ;
+include('project.php') ;
 include($_SERVER['FILE_PREFIX'] . '/_core/preamble.php') ;
 ?>
   

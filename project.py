@@ -3,9 +3,13 @@ from project_module import project_object, image_object, link_object, challenge_
 p = project_object('feynman', 'Feynman diagram maker')
 p.domain = 'http://www.aidansean.com/'
 p.path = 'feynman'
-p.preview_image_ = image_object('http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg', 408, 287)
+p.preview_image    = image_object('%s/images/project.jpg'   %p.path, 150, 250)
+p.preview_image_bw = image_object('%s/images/project_bw.jpg'%p.path, 150, 250)
+p.folder_name = 'aidansean'
 p.github_repo_name = 'feynman'
 p.mathjax = False
+p.tags = 'Tools,Physics'
+p.technologies = 'canvas,HTML,PHP,SVG'
 p.links.append(link_object(p.domain, 'feynman', 'Live page'))
 p.introduction = 'One of the most common diagrams that particle physicists use are Feynman diagrams.  There are already a few tools that can be used to make them, but they usually have some significant drawback (including non-intuitive interface, poor quality graphics, lack of control over the final image, text only input.)  This is a drag and drop style Feynman diagram maker aimed at making creation of the diagrams as quick and simple as possible.  This is quite an advanced project with lots of scope for further development.'
 p.overview = '''The user clicks and drags to create elements on an HTML canvas.  These elements can be simply written to an image file.  In order to create symbols, MathJax is used to interpret LaTeX snippets.  When the user clicks on a symbol an SVG image is used to capture the element graphically and then this is written to a canvas.  (Often a symbol is used several times in one diagram, so saving to an intermediate canvas saves CPU time and memory.)  This canvas is then copied to the larger canvas when the user clicks on it.'''
@@ -16,4 +20,3 @@ p.challenges.append(challenge_object('It\'s necessary to be able to add differen
 
 p.challenges.append(challenge_object('The application to be user friendly and intuitive.', 'Alpha teseting shows most of the existing features to be quite intuitive.  However documentation and video tutorials would be very useful.', 'Resolved, to be revisited'))
 
-print p.wordpress_text()
